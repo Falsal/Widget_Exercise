@@ -7,15 +7,19 @@ const Search = () => {
 
 	useEffect(() => {
 		const search = async () => {
-			const { data } = await axios.get('http://en.wikipedia.org/w/api.php', {
-				params: {
-					action: 'query',
-					list: 'search',
-					origin: '*',
-					format: 'json',
-					srsearch: term
+			const { data } = await axios.get(
+				'http://en.wikipedia.org/w/api.php/allow-cors',
+				{ mode: 'cors' },
+				{
+					params: {
+						action: 'query',
+						list: 'search',
+						origin: '*',
+						format: 'json',
+						srsearch: term
+					}
 				}
-			})
+			)
 			setResults(data.query.search)
 		}
 		if (term && !results.length) {
