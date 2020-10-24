@@ -8,7 +8,7 @@ const Search = () => {
 	useEffect(() => {
 		const search = async () => {
 			const { data } = await axios.get(
-				'http://en.wikipedia.org/w/api.php/allow-cors',
+				'https://en.wikipedia.org/w/api.php/allow-cors',
 				{ mode: 'cors' },
 				{
 					params: {
