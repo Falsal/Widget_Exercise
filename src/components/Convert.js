@@ -17,8 +17,8 @@ const Convert = ({ language, text }) => {
 
 	const doTranslations = async () => {
 		const { data } = await axios.post(
-			'https://translation.googleapis.com/language/translate/v2',
-			{},
+			'https://translation.googleapis.com/language/translate/v2/allow-cors',
+			{ mode: 'cors' },
 			{
 				params: {
 					q: debouncedText,
