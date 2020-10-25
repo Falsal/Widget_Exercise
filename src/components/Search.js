@@ -12,6 +12,7 @@ const Search = () => {
 				{ mode: 'cors' },
 				{
 					params: {
+						headers: { 'content-type': 'application/x-www-form-urlencoded' },
 						action: 'query',
 						list: 'search',
 						origin: '*',
