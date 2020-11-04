@@ -23,8 +23,11 @@ const Convert = ({ language, text }) => {
 				params: {
 					q: debouncedText,
 					target: language.value,
-					key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
-				}
+					key:
+						'AIzaSyAc9mliXTzxcYQbmVzLh6sWx2tB1mDD6JsAIzaSyAc9mliXTzxcYQbmVzLh6sWx2tB1mDD6Js'
+				},
+
+				header: 'Access-Control-Allow-Origin'
 			}
 		)
 		setTranslated(data.data.translations[0].translatedText)
